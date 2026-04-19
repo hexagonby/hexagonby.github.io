@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="be">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexagon</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="home">
+            <a href="#"><img src="/assets/logo.svg" /></a>
+          </li>
+          <!-- <li><a href="#">Навіны</a></li>
+        <li><a href="#">Справаздачы</a></li> -->
+          <li class="contacts-link">
+            <a class="header-link" href="./legal.html">Юрыдычная інфармацыя</a>
+          </li>
+          <li class="contacts-link">
+            <a class="header-link" href="./concept.html">Канцэпцыя</a>
+          </li>
+          <li class="accent-link"><a href="#support">Падтрымаць</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="hero-text">
+          Незалежны фінансавы інструмент
+          <span class="accent">доўгатэрміновай</span> падтрымкі
+        </p>
+        <img class="hero-desktop" src="/assets/desktop.gif" />
+        <img class="hero-mobile" src="/assets/mobile.gif" />
+      </section>
+      <section class="about">
+        <div class="about-text">
+          <p class="about-text-header">Пра Hexagon</p>
+          <p class="about-text-text">
+            Hexagon — гэта эндаўмент-фонд, які працуе на доўгатэрміновую
+            перспектыву. Мы не разлічваем на гранты і знешняе фінансаванне, а
+            ствараем фінансавую аснову, якая дазволіць падтрымліваць важныя
+            ініцыятывы незалежна ад эканамічных крызісаў і палітычнай сітуацыі.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="card fade">
+            <img src="/assets/card1-header.svg" />
+            <div class="card-text">
+              <p class="card-text-header">Наш падыход</p>
+              <p class="card-text-text">
+                Мы арыентуемся на празрыстасць і эфектыўнасць. У адрозненне ад
+                класічных дабрачынных арганізацый, якія часта залежаць ад
+                перыядычных ахвяраванняў, наш фонд пабудаваны так, каб быць
+                самадастатковым. Мы клапоцімся пра тое, каб кожны ахвяраваны
+                даляр працаваў не разава, а прыносіў даход на доўгія гады.
+              </p>
+            </div>
+          </div>
+          <div class="card fade">
+            <img src="/assets/card2-header.svg" />
+            <div class="card-text">
+              <p class="card-text-header">Прынцыпы Hexagon</p>
+              <p class="card-text-text">
+                Незалежнасць — мы не будзем залежаць ад грантаў і знешніх
+                фінансавых плыняў. Доўгатэрміновасць — наш фонд пабудаваны так,
+                каб працаваць дзесяцігоддзямі. Разумнае інвеставанне — сродкі
+                размяркоўваюцца максімальна бяспечна, з улікам доўгатэрміновага
+                росту.
+              </p>
+            </div>
+          </div>
+          <div class="card fade">
+            <img src="/assets/card3-header.svg" />
+            <div class="card-text">
+              <p class="card-text-header">Нашы мэты і бачанне</p>
+              <p class="card-text-text">
+                Мы ствараем фінансавы механізм, які дазволіць устойліва
+                падтрымліваць ініцыятывы і не залежаць ад вонкавых умоў. У
+                кароткатэрміновай перспектыве мы фарміруем першасны капітал і
+                наладжваем празрысты механізм інвеставання. Далей мы плануем
+                павялічваць капітал фонду і пашыраць колькасць праектаў, якія
+                могуць разлічваць на фінансаванне ад Hexagon.
+              </p>
+            </div>
+          </div>
+          <div class="card-buttons">
+            <a class="card-button" onclick="prevCard()">&#10094;</a>
+            <a class="card-button second-card-button" onclick="nextCard()"
+              >&#10095;</a
+            >
+          </div>
+          <script>
+            let cardIndex = 0;
+            let cards = document.getElementsByClassName("card");
+            for (let i = 1; i < cards.length; i++) {
+              cards[i].style.display = "none";
+            }
+
+            function prevCard() {
+              cards[cardIndex].style.display = "none";
+              if (--cardIndex < 0) {
+                cardIndex = cards.length - 1;
+              }
+              cards[cardIndex].style.display = "flex";
+            }
+
+            function nextCard() {
+              cards[cardIndex].style.display = "none";
+              if (++cardIndex === cards.length) {
+                cardIndex = 0;
+              }
+              cards[cardIndex].style.display = "flex";
+            }
+          </script>
+        </div>
+      </section>
+      <section class="goal">
+        <div class="goal-text">
+          <p class="goal-text-header">Наша галоўная мэта</p>
+          <p class="goal-text-text">
+            Стварыць скарбонку, якая будзе працаваць заўсёды, незалежна ад
+            знешніх фактараў.
+          </p>
+        </div>
+        <div class="splash"></div>
+      </section>
+      <section class="how-it-works">
+        <div class="gradient-top"></div>
+        <div class="gradient-bottom"></div>
+        <div class="how-text">
+          <p class="how-text-header">Як гэта працуе</p>
+          <p class="how-text-text-one">
+            Эндаўмент-фонд (англ. endowment) — гэта фінансавы інструмент
+            доўгатэрміновай падтрымкі, які дазваляе арганізацыі стабільна
+            функцыянаваць і рэалізоўваць сваю місію на працягу многіх гадоў.
+          </p>
+          <p class="how-text-text-two">
+            Галоўны прынцып эндаўмента — захаванне асноўнага капіталу і
+            выкарыстанне даходу ад яго інвеставання.
+          </p>
+        </div>
+        <div class="how-cards-container">
+          <div class="how-card">
+            <img src="/assets/how-card1-icon.svg" />
+            <div class="how-card-text">
+              <p>Фарміраванне капіталу</p>
+              <p>
+                Фонд атрымлівае ахвяраванні ад дабрачынцаў, арганізацый або
+                іншых крыніц.
+              </p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="/assets/how-card2-icon.svg" />
+            <div class="how-card-text">
+              <p>Інвеставанне сродкаў</p>
+              <p>
+                Сродкі размяшчаюцца ў надзейныя фінансавыя інструменты (акцыі,
+                аблігацыі, фонды і інш.), што дазваляе атрымліваць стабільны
+                прыбытак.
+              </p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="/assets/how-card3-icon.svg" />
+            <div class="how-card-text">
+              <p>Выкарыстанне даходу</p>
+              <p>
+                Толькі даход ад інвестыцый выкарыстоўваецца для фінансавання
+                праектаў і ініцыятыў, у той час як асноўны капітал застаецца
+                недатыкальным.
+              </p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="/assets/how-card4-icon.svg" />
+            <div class="how-card-text">
+              <p>Доўгатэрміновы эфект</p>
+              <p>
+                Дзякуючы такому падыходу фонд можа існаваць на працягу
+                дзесяцігоддзяў, забяспечваючы фінансавую стабільнасць і
+                бесперапынную падтрымку ініцыятыў.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="universities">
+        <div class="uni-wrapper">
+          <div class="uni-text">
+            <p class="uni-text-one">
+              Эндаўмент-фонды шырока распаўсюджаны ў свеце. Паводле такой схемы
+              працуюць шматлікія арганізацыі ад найлепшых заходніх універсітэтаў
+              (Стэнфард, Кембрыдж) да Чырвонага крыжа.
+            </p>
+            <p class="uni-text-two">
+              Час і нам стварыць штосьці на стагоддзі! І няхай увесь свет працуе
+              на беларусаў 🙂
+            </p>
+          </div>
+          <img class="uni-svg" src="/assets/temp-uni.svg" />
+        </div>
+      </section>
+      <section id="support" class="support">
+        <div class="support-wrapper">
+          <img src="/assets/support.svg" />
+          <p>Падтрымаць Hexagon</p>
+          <div class="buttons">
+            <ul>
+              <li>
+                <a href="https://donate.stripe.com/test_dRm5kCaxia005745Mqa7C00"
+                  >Stripe</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="logo-social">
+        <img src="/assets/logo.svg" height="60px" />
+        <div class="social-links">
+          <img src="/assets/facebook.svg" height="24px" />
+          <img src="/assets/telegram.svg" height="24px" />
+        </div>
+      </div>
+      <div class="legal">
+        <p>
+          FUNDACJA WSPIERANIA ROZWOJU SPOŁECZNOŚCI OBYWATELSKIEJ HEXAGON (W
+          SKRÓCIE FWRSO HEXAGON)
+        </p>
+        <br />
+        <p>KRS: 0001164594; NIP: 7812086774; REGON: 541295887</p>
+        <br />
+        <p>Adres: Święty Marcin 29 / 8, 61-806 Poznań, Polska</p>
+      </div>
+    </footer>
+  </body>
+</html>

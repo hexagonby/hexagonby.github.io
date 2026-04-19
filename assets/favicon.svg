@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 170 140">
+  <defs>
+    <style>
+      .st0 {
+        fill: #d9563a;
+      }
+
+      .st1 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <g>
+    <circle class="st0" cx="27.2" cy="120.1" r="4.8"/>
+    <circle class="st0" cx="47.5" cy="120.1" r="4.8"/>
+    <circle class="st0" cx="67.8" cy="120.1" r="4.8"/>
+    <circle class="st0" cx="88" cy="120.1" r="4.8"/>
+    <circle class="st0" cx="108.3" cy="120.1" r="4.8"/>
+    <circle class="st0" cx="128.6" cy="120.1" r="4.8"/>
+  </g>
+  <g>
+    <circle class="st0" cx="27.2" cy="101.4" r="4.8"/>
+    <circle class="st0" cx="47.5" cy="101.4" r="4.8"/>
+    <circle class="st0" cx="67.8" cy="101.4" r="4.8"/>
+    <circle class="st0" cx="88" cy="101.4" r="4.8"/>
+    <circle class="st0" cx="108.3" cy="101.4" r="4.8"/>
+    <circle class="st0" cx="128.6" cy="101.4" r="4.8"/>
+  </g>
+  <g>
+    <circle class="st0" cx="27.2" cy="82.8" r="4.8"/>
+    <circle class="st0" cx="47.5" cy="82.8" r="4.8"/>
+    <circle class="st0" cx="67.8" cy="82.8" r="4.8"/>
+    <circle class="st0" cx="88" cy="82.8" r="4.8"/>
+    <circle class="st0" cx="108.3" cy="82.8" r="4.8"/>
+    <circle class="st0" cx="128.6" cy="82.8" r="4.8"/>
+    <circle class="st0" cx="148.8" cy="82.8" r="4.8"/>
+  </g>
+  <g>
+    <circle class="st0" cx="47.5" cy="64.2" r="4.8"/>
+    <circle class="st0" cx="67.8" cy="64.2" r="4.8"/>
+    <circle class="st0" cx="88" cy="64.2" r="4.8"/>
+    <circle class="st0" cx="108.3" cy="64.2" r="4.8"/>
+    <circle class="st0" cx="128.6" cy="64.2" r="4.8"/>
+  </g>
+  <g>
+    <circle class="st0" cx="67.8" cy="45.6" r="4.8"/>
+    <circle class="st0" cx="88" cy="45.6" r="4.8"/>
+    <circle class="st0" cx="108.3" cy="45.6" r="4.8"/>
+    <circle class="st0" cx="128.6" cy="45.6" r="4.8"/>
+  </g>
+  <g>
+    <circle class="st0" cx="88" cy="26.9" r="4.8"/>
+    <circle class="st0" cx="108.3" cy="26.9" r="4.8"/>
+  </g>
+</svg>
