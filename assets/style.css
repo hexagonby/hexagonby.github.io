@@ -58,7 +58,68 @@ nav a:hover {
 
 .contacts-link {
   margin-right: min(3.5em, 2%);
-  overflow: hidden;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--color-dark);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  margin-bottom: 3px;
+  transition: transform 0.2s, margin-bottom 0.2s;
+}
+
+.dropdown.open .dropdown-toggle::after {
+  transform: rotate(-135deg);
+  margin-bottom: -3px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  list-style: none;
+  padding: 8px 0;
+  z-index: 200;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
 }
 
 .header-link {
