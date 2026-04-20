@@ -26,6 +26,17 @@ document.querySelectorAll('nav a').forEach(function (link) {
   });
 });
 
+// Scroll-to-top button
+var scrollTopBtn = document.querySelector('.scroll-top');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function () {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Close dropdowns and nav when clicking outside
 document.addEventListener('click', function (e) {
   document.querySelectorAll('.dropdown.open').forEach(function (d) {
