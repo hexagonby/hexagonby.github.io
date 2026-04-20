@@ -50,6 +50,11 @@ nav .home {
   height: 60px;
 }
 
+.home a img {
+  height: 60px;
+  width: auto;
+}
+
 nav a {
   color: var(--color-dark);
   display: flex;
