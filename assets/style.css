@@ -465,13 +465,14 @@ nav a:hover {
   line-height: 100%;
 }
 
-.buttons ul {
+.support-index-btn ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+  font-size: 150%;
 }
 
-.buttons ul li {
+.support-index-btn ul li {
   width: 300px;
   height: 73px;
   border: 1px solid #ffffff;
@@ -479,12 +480,12 @@ nav a:hover {
   align-content: center;
 }
 
-.buttons ul li a {
-  color: #ffffff;
+.support-index-btn a {
+  color: inherit;
   text-decoration: none;
 }
 
-.buttons ul li a:hover {
+.support-index-btn a:hover {
   text-decoration: underline;
 }
 
