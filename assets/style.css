@@ -60,6 +60,39 @@ nav a:hover {
   margin-right: min(3.5em, 2%);
 }
 
+.nav-hamburger-item {
+  display: none;
+}
+
+.nav-hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+nav.open .nav-hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+nav.open .nav-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+nav.open .nav-hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .dropdown {
   position: relative;
 }
@@ -550,6 +583,8 @@ nav a:hover {
   .how-it-works {
     display: flex;
     flex-direction: column;
+    height: auto;
+    padding-bottom: 60px;
   }
 
   .how-cards-container {
@@ -585,12 +620,139 @@ nav a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  /* Goal — remove hardcoded heights */
+  .goal {
+    height: auto;
+  }
+
+  .goal-text {
+    min-height: auto;
+    padding: 60px var(--padding-x);
+    border-radius: 0 0 50px 50px;
+  }
+
+  .splash {
+    height: 260px;
+    top: 0;
+  }
+
+  /* How-it-works cards — back to vertical stack */
+  .how-cards-container {
+    flex-direction: column;
+    overflow: visible;
+    padding: 24px var(--padding-x);
+  }
+
+  .how-card {
+    flex-direction: row;
+    min-width: 0;
+  }
+
+  .how-card-text {
+    padding: 20px 24px;
+    min-height: 0;
+  }
+
+  /* Universities */
+  .universities {
+    padding: 48px var(--padding-x);
+  }
+
+  .uni-text {
+    font-size: var(--fs-body);
+  }
+
+  /* Concept / Legal pages */
+  .concept {
+    padding: 40px var(--padding-x);
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  /* Support buttons */
+  .support-index-btn ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .support-index-btn ul li {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 500px) {
+  /* Hero image swap */
   .hero-desktop {
     display: none;
   }
 
   .hero-mobile {
     display: block;
+  }
+
+  /* About — smaller corner radius */
+  .about {
+    border-radius: 40px 40px 0 0;
+  }
+
+  /* Hamburger nav */
+  header {
+    background: #ffffff;
+    position: relative;
+    z-index: 100;
+  }
+
+  .nav-hamburger-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .contacts-link,
+  .accent-link {
+    display: none;
+  }
+
+  nav.open ul {
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+  }
+
+  nav.open .contacts-link,
+  nav.open .accent-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+    padding: 14px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  nav.open .accent-link {
+    background: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  nav.open .accent-link a {
+    color: var(--color-dark);
+  }
+
+  /* Dropdown in mobile nav — inline, not floating */
+  nav.open .dropdown .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 8px 0 0 16px;
+    border-radius: 0;
   }
 }
