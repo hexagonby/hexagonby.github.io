@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
@@ -743,6 +747,10 @@ nav.open .nav-hamburger span:nth-child(3) {
   /* About — smaller corner radius */
   .about {
     border-radius: 40px 40px 0 0;
+  }
+
+  .card {
+    width: 100%;
   }
 
   /* Hamburger nav */
