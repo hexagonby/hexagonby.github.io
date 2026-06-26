@@ -207,14 +207,12 @@ nav.open .nav-hamburger span:nth-child(3) {
 .accent-link {
   background-color: var(--color-accent);
   border-radius: 15px;
-  padding-top: min(1em, 3%);
-  padding-bottom: min(1em, 3%);
-  padding-right: min(2em, 6%);
-  padding-left: min(2em, 6%);
 }
 
 .accent-link a {
   color: #ffffff;
+  display: block;
+  padding: 1em 2em;
 }
 
 .about {
@@ -778,13 +776,18 @@ nav.open .nav-hamburger span:nth-child(3) {
   }
 
   .subscribe-group {
-    width: 100%;
+    width: 84%;
     max-width: 300px;
   }
 
   .support-btn {
-    width: 100%;
+    width: 84%;
     max-width: 300px;
+  }
+
+  .subscribe-group .support-btn {
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -835,7 +838,7 @@ nav.open .nav-hamburger span:nth-child(3) {
     align-items: center;
     width: 100%;
     margin-right: 0;
-    padding: 14px 0;
+    padding: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     background: none;
     border-radius: 0;
@@ -843,6 +846,8 @@ nav.open .nav-hamburger span:nth-child(3) {
 
   nav.open .accent-link a {
     color: var(--color-dark);
+    width: 100%;
+    padding: 14px 0;
   }
 
   /* Dropdown — "Аб фондзе" toggle as full-width item, sub-items stack inline below */
