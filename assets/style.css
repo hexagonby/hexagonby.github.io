@@ -541,13 +541,35 @@ nav.open .nav-hamburger span:nth-child(3) {
 
 .subscribe-menu {
   display: none;
-  flex-direction: column;
-  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   width: 100%;
+  margin-top: 4px;
 }
 
 .subscribe-menu.open {
   display: flex;
+}
+
+.amount-btn {
+  flex: 0 0 calc((100% - 24px) / 3);
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.amount-btn:hover {
+  background-color: rgba(255, 255, 255, 0.28);
 }
 
 .footer {
