@@ -203,11 +203,24 @@
           <img src="assets/support.svg" />
           <p>Падтрымаць Hexagon</p>
           <div class="support-index-btn">
-            <ul>
-              <a href="https://donate.stripe.com/test_dRm5kCaxia005745Mqa7C00">
-                <li>Stripe</li>
-              </a>
-            </ul>
+            <div class="subscribe-group">
+              <div class="support-btn subscribe-toggle" onclick="toggleSubscribe()">Падпіска</div>
+              <div class="subscribe-menu" id="subscribe-menu">
+                <a class="support-btn" href="https://buy.stripe.com/4gM14m48Ub44eHE8YCa7C03">5 €</a>
+                <a class="support-btn" href="https://buy.stripe.com/28E9AS9te4FGarodeSa7C02">10 €</a>
+                <a class="support-btn" href="https://buy.stripe.com/9B6fZggVGa00dDAfn0a7C01">25 €</a>
+                <a class="support-btn" href="https://buy.stripe.com/dRm5kCaxia005745Mqa7C00">50 €</a>
+                <a class="support-btn" href="https://buy.stripe.com/6oU14mfRCegg9nkdeSa7C04">100 €</a>
+              </div>
+            </div>
+            <a class="support-btn" href="https://donate.stripe.com/8x2bJ0axidcc8jgfn0a7C05">Разавая падтрымка</a>
+            <script>
+              function toggleSubscribe() {
+                document
+                  .getElementById("subscribe-menu")
+                  .classList.toggle("open");
+              }
+            </script>
           </div>
         </div>
       </section>

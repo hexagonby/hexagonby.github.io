@@ -507,28 +507,47 @@ nav.open .nav-hamburger span:nth-child(3) {
   line-height: 100%;
 }
 
-.support-index-btn ul {
-  list-style: none;
+.support-index-btn {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
   font-size: 150%;
 }
 
-.support-index-btn ul li {
+.support-btn {
   width: 300px;
   height: 73px;
   border: 1px solid #ffffff;
   border-radius: 15px;
-  align-content: center;
-}
-
-.support-index-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
-.support-index-btn a:hover {
+.support-btn:hover {
   text-decoration: underline;
+}
+
+.subscribe-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.subscribe-menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.subscribe-menu.open {
+  display: flex;
 }
 
 .footer {
@@ -730,17 +749,20 @@ nav.open .nav-hamburger span:nth-child(3) {
   }
 
   /* Support buttons */
-  .support-index-btn ul {
+  .support-index-btn {
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
 
-  .support-index-btn ul li {
+  .subscribe-group {
     width: 100%;
     max-width: 300px;
-    margin-bottom: 0;
-    padding: 0 20px;
+  }
+
+  .support-btn {
+    width: 100%;
+    max-width: 300px;
   }
 }
 
