@@ -30,8 +30,21 @@ body {
   font-style: normal;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 header {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  background: #ffffff;
+  box-shadow: var(--shadow);
   padding-top: 1.5rem;
+  padding-bottom: 1rem;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
 }
@@ -811,12 +824,6 @@ nav.open .nav-hamburger span:nth-child(3) {
   }
 
   /* Hamburger nav */
-  header {
-    background: #ffffff;
-    position: relative;
-    z-index: 100;
-  }
-
   .nav-hamburger-item {
     display: flex;
     align-items: center;
