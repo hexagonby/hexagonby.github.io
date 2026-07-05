@@ -43,8 +43,8 @@ header {
   z-index: 300;
   background: #ffffff;
   box-shadow: var(--shadow);
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
 }
