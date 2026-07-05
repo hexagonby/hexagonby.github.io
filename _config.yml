@@ -1,6 +1,16 @@
 title: Hexagonby
 lang: be
 
+defaults:
+  - scope:
+      path: en
+    values:
+      lang: en
+  - scope:
+      path: pl
+    values:
+      lang: pl
+
 exclude:
   - README.md
   - CLAUDE.md

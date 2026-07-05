@@ -1,15 +1,23 @@
-<!doctype html>
-<html lang="{{ page.lang | default: site.lang }}">
+{% assign page_lang = page.lang | default: site.lang %}
+{% if page_lang == 'be' %}{% assign lang_prefix = '' %}{% else %}{% assign lang_prefix = '/' | append: page_lang %}{% endif %}
+{% assign base_url = page.url %}
+{% if lang_prefix != '' %}{% assign base_url = page.url | remove_first: lang_prefix %}{% endif %}
+{% assign t = site.data.i18n[page_lang] %}<!doctype html>
+<html lang="{{ page_lang }}">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="alternate" hreflang="be" href="{{ base_url }}" />
+    <link rel="alternate" hreflang="en" href="/en{{ base_url }}" />
+    <link rel="alternate" hreflang="pl" href="/pl{{ base_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ base_url }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title | default: site.title }}</title>
   </head>
@@ -19,7 +27,7 @@
 {{ content }}
     </main>
 {% include footer.html %}
-    <button class="scroll-top" aria-label="Наверх"></button>
-    <script src="assets/main.js"></script>
+    <button class="scroll-top" aria-label="{{ t.ui.scroll_top }}"></button>
+    <script src="/assets/main.js"></script>
   </body>
 </html>

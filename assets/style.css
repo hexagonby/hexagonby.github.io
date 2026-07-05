@@ -78,8 +78,17 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.contacts-link {
+.contacts-link,
+.lang-link {
   margin-right: min(3.5em, 2%);
+}
+
+.lang-toggle {
+  text-transform: uppercase;
+}
+
+.lang-link .dropdown-menu .current {
+  font-weight: 700;
 }
 
 .nav-hamburger-item {
@@ -897,6 +906,7 @@ nav.open .nav-hamburger span:nth-child(3) {
   }
 
   .contacts-link,
+  .lang-link,
   .accent-link {
     display: none;
   }
@@ -924,8 +934,9 @@ nav.open .nav-hamburger span:nth-child(3) {
     padding: 14px 0;
   }
 
-  /* Dropdown — "Аб фондзе" toggle as full-width item, sub-items stack inline below */
-  nav.open .contacts-link.dropdown {
+  /* Dropdowns — "Аб фондзе" / language toggles as full-width items, sub-items stack inline below */
+  nav.open .contacts-link.dropdown,
+  nav.open .lang-link.dropdown {
     display: block;
     width: 100%;
     margin-right: 0;

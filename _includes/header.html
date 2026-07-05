@@ -1,23 +1,32 @@
+    {% comment %} page_lang, lang_prefix, base_url and t are assigned in _layouts/default.html {% endcomment %}
     <header>
       <nav>
         <ul>
           <li class="home">
-            <a href="/"><img src="assets/logo.svg" /></a>
+            <a href="{% if lang_prefix == '' %}/{% else %}{{ lang_prefix }}/{% endif %}"><img src="/assets/logo.svg" /></a>
           </li>
           <li class="contacts-link dropdown">
-            <button class="dropdown-toggle">Аб фондзе</button>
+            <button class="dropdown-toggle">{{ t.nav.about }}</button>
             <ul class="dropdown-menu">
-              <li><a href="./concept.html">Канцэпцыя</a></li>
-              <li><a href="./legal.html">Статут</a></li>
-              <li><a href="./reports.html">Справаздачы</a></li>
-              <li><a href="./strategy.html">Стратэгія</a></li>
+              <li><a href="{{ lang_prefix }}/concept.html">{{ t.nav.concept }}</a></li>
+              <li><a href="{{ lang_prefix }}/legal.html">{{ t.nav.statute }}</a></li>
+              <li><a href="{{ lang_prefix }}/reports.html">{{ t.nav.reports }}</a></li>
+              <li><a href="{{ lang_prefix }}/strategy.html">{{ t.nav.strategy }}</a></li>
+            </ul>
+          </li>
+          <li class="lang-link dropdown">
+            <button class="dropdown-toggle lang-toggle" aria-label="{{ t.ui.language }}">{{ page_lang }}</button>
+            <ul class="dropdown-menu">
+              <li><a href="{{ base_url }}"{% if page_lang == 'be' %} class="current"{% endif %}>Беларуская</a></li>
+              <li><a href="/en{{ base_url }}"{% if page_lang == 'en' %} class="current"{% endif %}>English</a></li>
+              <li><a href="/pl{{ base_url }}"{% if page_lang == 'pl' %} class="current"{% endif %}>Polski</a></li>
             </ul>
           </li>
           <li class="accent-link">
-            <a href="{% if page.url == '/' %}#support{% else %}./index.html#support{% endif %}">Падтрымаць</a>
+            <a href="{% if base_url == '/' %}#support{% else %}{{ lang_prefix }}/#support{% endif %}">{{ t.nav.support }}</a>
           </li>
           <li class="nav-hamburger-item">
-            <button class="nav-hamburger" aria-label="Меню">
+            <button class="nav-hamburger" aria-label="{{ t.ui.menu }}">
               <span></span><span></span><span></span>
             </button>
           </li>

@@ -1,0 +1,77 @@
+nav:
+  about: About the fund
+  concept: Concept
+  statute: Statute
+  reports: Reports
+  strategy: Strategy
+  support: Support
+ui:
+  menu: Menu
+  language: Language
+  scroll_top: Back to top
+index:
+  hero_before: An independent financial instrument of
+  hero_accent: long-term
+  hero_after: support
+  about_header: About Hexagonby
+  about_text: >-
+    Hexagonby is an endowment fund built for the long term. We do not rely
+    on grants or external funding — instead, we are creating a financial
+    foundation that will allow us to support important initiatives regardless
+    of economic crises or the political situation.
+  card1_header: Our approach
+  card1_text: >-
+    We are committed to transparency and efficiency. Unlike traditional
+    charities, which often depend on recurring donations, our fund is designed
+    to be self-sustaining. We make sure that every donated dollar works not
+    just once, but keeps generating income for years to come.
+  card2_header: Hexagonby principles
+  card2_p1: >-
+    Independence — we will not depend on grants or external financial flows.
+  card2_p2: >-
+    Long-term focus — our fund is built to operate for decades.
+  card2_p3: >-
+    Prudent investing — funds are allocated as safely as possible,
+    with long-term growth in mind.
+  card3_header: Our goals and vision
+  card3_text: >-
+    We are creating a financial mechanism that will sustainably support
+    initiatives regardless of external conditions. In the short term, we are
+    building the initial capital and setting up a transparent investment
+    mechanism. Going forward, we plan to grow the fund's capital and expand
+    the number of projects that can count on funding from Hexagonby.
+  goal_header: Our main goal
+  goal_text: >-
+    To create an endowment that will keep working forever, regardless of
+    external factors.
+  how_header: How it works
+  how_p1: >-
+    An endowment fund is a financial instrument of long-term support that
+    allows an organization to operate steadily and pursue its mission for
+    many years.
+  how_p2: >-
+    The core principle of an endowment is preserving the principal capital
+    and using only the income from its investment.
+  how_card1_title: Building the capital
+  how_card1_text: >-
+    The fund receives donations from benefactors, organizations and
+    other sources.
+  how_card2_title: Investing the funds
+  how_card2_text: >-
+    The funds are placed in reliable financial instruments (stocks, bonds,
+    funds, etc.), which generates a stable return.
+  how_card3_title: Using the income
+  how_card3_text: >-
+    Only the investment income is used to finance projects and initiatives,
+    while the principal capital remains untouched.
+  how_card4_title: Long-term effect
+  how_card4_text: >-
+    Thanks to this approach, the fund can exist for decades, providing
+    financial stability and uninterrupted support for initiatives.
+  uni_text: >-
+    Endowment funds are widespread around the world. Many organizations
+    operate on this model — from the top Western universities (Stanford,
+    Cambridge) to the Red Cross.
+  support_header: Support Hexagonby
+  support_subscribe: Subscription
+  support_once: One-time donation

@@ -1,0 +1,172 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.i18n[lang] %}
+      <section class="hero">
+        <p class="hero-text">
+          {{ t.index.hero_before }}
+          <span class="accent">{{ t.index.hero_accent }}</span> {{ t.index.hero_after }}
+        </p>
+        <img class="hero-desktop" src="/assets/desktop.gif" />
+        <img class="hero-mobile" src="/assets/mobile.gif" />
+      </section>
+      <section class="about">
+        <div class="about-text">
+          <p class="about-text-header">{{ t.index.about_header }}</p>
+          <p class="about-text-text">
+            {{ t.index.about_text }}
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="card fade">
+            <img src="/assets/card1-header.svg" />
+            <div class="card-text">
+              <p class="card-text-header">{{ t.index.card1_header }}</p>
+              <p class="card-text-text">
+                {{ t.index.card1_text }}
+              </p>
+            </div>
+          </div>
+          <div class="card fade">
+            <img src="/assets/card2-header.svg" />
+            <div class="card-text">
+              <p class="card-text-header">{{ t.index.card2_header }}</p>
+              <p class="card-text-text">
+                {{ t.index.card2_p1 }}<br><br>
+                {{ t.index.card2_p2 }}<br><br>
+                {{ t.index.card2_p3 }}
+              </p>
+            </div>
+          </div>
+          <div class="card fade">
+            <img src="/assets/card3-header.svg" />
+            <div class="card-text">
+              <p class="card-text-header">{{ t.index.card3_header }}</p>
+              <p class="card-text-text">
+                {{ t.index.card3_text }}
+              </p>
+            </div>
+          </div>
+          <div class="card-buttons">
+            <a class="card-button" onclick="prevCard()">&#10094;</a>
+            <a class="card-button second-card-button" onclick="nextCard()">&#10095;</a>
+          </div>
+          <script>
+            let cardIndex = 0;
+            let cards = document.getElementsByClassName("card");
+            for (let i = 1; i < cards.length; i++) {
+              cards[i].style.display = "none";
+            }
+
+            function prevCard() {
+              cards[cardIndex].style.display = "none";
+              if (--cardIndex < 0) {
+                cardIndex = cards.length - 1;
+              }
+              cards[cardIndex].style.display = "flex";
+            }
+
+            function nextCard() {
+              cards[cardIndex].style.display = "none";
+              if (++cardIndex === cards.length) {
+                cardIndex = 0;
+              }
+              cards[cardIndex].style.display = "flex";
+            }
+          </script>
+        </div>
+      </section>
+      <section class="goal">
+        <div class="goal-text">
+          <p class="goal-text-header">{{ t.index.goal_header }}</p>
+          <p class="goal-text-text">
+            {{ t.index.goal_text }}
+          </p>
+        </div>
+        <div class="splash"></div>
+      </section>
+      <section class="how-it-works">
+        <div class="gradient-top"></div>
+        <div class="gradient-bottom"></div>
+        <div class="how-text">
+          <p class="how-text-header">{{ t.index.how_header }}</p>
+          <p class="how-text-p">
+            {{ t.index.how_p1 }}
+          </p>
+          <p class="how-text-p">
+            {{ t.index.how_p2 }}
+          </p>
+        </div>
+        <div class="how-cards-container">
+          <div class="how-card">
+            <img src="/assets/how-card1-icon.svg" />
+            <div class="how-card-text">
+              <p>{{ t.index.how_card1_title }}</p>
+              <p>
+                {{ t.index.how_card1_text }}
+              </p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="/assets/how-card2-icon.svg" />
+            <div class="how-card-text">
+              <p>{{ t.index.how_card2_title }}</p>
+              <p>
+                {{ t.index.how_card2_text }}
+              </p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="/assets/how-card3-icon.svg" />
+            <div class="how-card-text">
+              <p>{{ t.index.how_card3_title }}</p>
+              <p>
+                {{ t.index.how_card3_text }}
+              </p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="/assets/how-card4-icon.svg" />
+            <div class="how-card-text">
+              <p>{{ t.index.how_card4_title }}</p>
+              <p>
+                {{ t.index.how_card4_text }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="universities">
+        <div class="uni-wrapper">
+          <div class="uni-text">
+            <p class="uni-text-one">
+              {{ t.index.uni_text }}
+            </p>
+          </div>
+          <img class="uni-svg" src="/assets/temp-uni.svg" />
+        </div>
+      </section>
+      <section id="support" class="support">
+        <div class="support-wrapper">
+          <img src="/assets/support.svg" />
+          <p>{{ t.index.support_header }}</p>
+          <div class="support-index-btn">
+            <div class="subscribe-group">
+              <div class="support-btn subscribe-toggle" onclick="toggleSubscribe()">{{ t.index.support_subscribe }}</div>
+              <div class="subscribe-menu" id="subscribe-menu">
+                <a class="amount-btn" href="https://buy.stripe.com/4gM14m48Ub44eHE8YCa7C03">€5</a>
+                <a class="amount-btn" href="https://buy.stripe.com/28E9AS9te4FGarodeSa7C02">€10</a>
+                <a class="amount-btn" href="https://buy.stripe.com/9B6fZggVGa00dDAfn0a7C01">€25</a>
+                <a class="amount-btn" href="https://buy.stripe.com/dRm5kCaxia005745Mqa7C00">€50</a>
+                <a class="amount-btn" href="https://buy.stripe.com/6oU14mfRCegg9nkdeSa7C04">€100</a>
+              </div>
+            </div>
+            <a class="support-btn" href="https://donate.stripe.com/8x2bJ0axidcc8jgfn0a7C05">{{ t.index.support_once }}</a>
+            <script>
+              function toggleSubscribe() {
+                document
+                  .getElementById("subscribe-menu")
+                  .classList.toggle("open");
+              }
+            </script>
+          </div>
+        </div>
+      </section>

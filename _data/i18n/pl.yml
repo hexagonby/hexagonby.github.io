@@ -1,0 +1,79 @@
+nav:
+  about: O fundacji
+  concept: Koncepcja
+  statute: Statut
+  reports: Sprawozdania
+  strategy: Strategia
+  support: Wesprzyj
+ui:
+  menu: Menu
+  language: Język
+  scroll_top: Do góry
+index:
+  hero_before: Niezależny instrument finansowy
+  hero_accent: długoterminowego
+  hero_after: wsparcia
+  about_header: O Hexagonby
+  about_text: >-
+    Hexagonby to fundusz wieczysty (endowment), działający w perspektywie
+    długoterminowej. Nie liczymy na granty ani finansowanie zewnętrzne —
+    budujemy fundament finansowy, który pozwoli wspierać ważne inicjatywy
+    niezależnie od kryzysów gospodarczych i sytuacji politycznej.
+  card1_header: Nasze podejście
+  card1_text: >-
+    Stawiamy na przejrzystość i efektywność. W odróżnieniu od klasycznych
+    organizacji charytatywnych, które często zależą od okresowych darowizn,
+    nasz fundusz został zbudowany tak, aby być samowystarczalnym. Dbamy o to,
+    aby każdy podarowany dolar pracował nie jednorazowo, lecz przynosił dochód
+    przez długie lata.
+  card2_header: Zasady Hexagonby
+  card2_p1: >-
+    Niezależność — nie będziemy zależeć od grantów i zewnętrznych przepływów
+    finansowych.
+  card2_p2: >-
+    Długoterminowość — nasz fundusz został zbudowany tak, aby działać przez
+    dziesięciolecia.
+  card2_p3: >-
+    Rozsądne inwestowanie — środki lokowane są maksymalnie bezpiecznie,
+    z myślą o długoterminowym wzroście.
+  card3_header: Nasze cele i wizja
+  card3_text: >-
+    Tworzymy mechanizm finansowy, który pozwoli trwale wspierać inicjatywy
+    niezależnie od warunków zewnętrznych. W krótkiej perspektywie budujemy
+    kapitał początkowy i uruchamiamy przejrzysty mechanizm inwestowania.
+    Następnie planujemy powiększać kapitał funduszu i poszerzać liczbę
+    projektów, które mogą liczyć na finansowanie od Hexagonby.
+  goal_header: Nasz główny cel
+  goal_text: >-
+    Stworzyć skarbonkę, która będzie działać zawsze, niezależnie od czynników
+    zewnętrznych.
+  how_header: Jak to działa
+  how_p1: >-
+    Fundusz wieczysty (ang. endowment) to instrument finansowy
+    długoterminowego wsparcia, który pozwala organizacji stabilnie
+    funkcjonować i realizować swoją misję przez wiele lat.
+  how_p2: >-
+    Główną zasadą endowmentu jest zachowanie kapitału podstawowego
+    i korzystanie wyłącznie z dochodu z jego inwestowania.
+  how_card1_title: Budowanie kapitału
+  how_card1_text: >-
+    Fundusz otrzymuje darowizny od darczyńców, organizacji i z innych źródeł.
+  how_card2_title: Inwestowanie środków
+  how_card2_text: >-
+    Środki lokowane są w wiarygodne instrumenty finansowe (akcje, obligacje,
+    fundusze itp.), co pozwala osiągać stabilny zysk.
+  how_card3_title: Wykorzystanie dochodu
+  how_card3_text: >-
+    Tylko dochód z inwestycji jest przeznaczany na finansowanie projektów
+    i inicjatyw, podczas gdy kapitał podstawowy pozostaje nienaruszony.
+  how_card4_title: Efekt długoterminowy
+  how_card4_text: >-
+    Dzięki takiemu podejściu fundusz może istnieć przez dziesięciolecia,
+    zapewniając stabilność finansową i nieprzerwane wsparcie inicjatyw.
+  uni_text: >-
+    Fundusze wieczyste są szeroko rozpowszechnione na świecie. Według tego
+    modelu działa wiele organizacji — od najlepszych zachodnich uniwersytetów
+    (Stanford, Cambridge) po Czerwony Krzyż.
+  support_header: Wesprzyj Hexagonby
+  support_subscribe: Subskrypcja
+  support_once: Wsparcie jednorazowe
