@@ -3,7 +3,7 @@
       <nav>
         <ul>
           <li class="home">
-            <a href="{% if lang_prefix == '' %}/{% else %}{{ lang_prefix }}/{% endif %}"><img src="/assets/logo.svg" /></a>
+            <a href="{% if lang_prefix == '' %}/{% else %}{{ lang_prefix }}/{% endif %}"><img class="logo-full" src="/assets/logo.svg" /><img class="logo-compact" src="/assets/favicon.svg" /></a>
           </li>
           <li class="contacts-link dropdown">
             <button class="dropdown-toggle">{{ t.nav.about }}</button>

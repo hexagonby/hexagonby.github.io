@@ -75,6 +75,10 @@ nav .home {
   width: auto;
 }
 
+.home .logo-compact {
+  display: none;
+}
+
 nav a {
   color: var(--color-dark);
   display: flex;
@@ -912,10 +916,30 @@ nav.open .nav-hamburger span:nth-child(3) {
     align-items: center;
   }
 
-  .contacts-link,
-  .lang-link,
-  .accent-link {
+  /* Compact logo without the wordmark */
+  .home .logo-full {
     display: none;
+  }
+
+  .home .logo-compact {
+    display: block;
+  }
+
+  .contacts-link {
+    display: none;
+  }
+
+  /* Lang switcher and "Падтрымаць" stay in the header row */
+  .lang-link {
+    margin-right: 12px;
+  }
+
+  .accent-link {
+    margin-right: 10px;
+  }
+
+  .accent-link a {
+    padding: 0.7em 1.1em;
   }
 
   nav.open ul {
@@ -923,40 +947,22 @@ nav.open .nav-hamburger span:nth-child(3) {
     padding-bottom: 12px;
   }
 
-  /* "Падтрымаць" — flat item */
-  nav.open .accent-link {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-right: 0;
-    padding: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    background: none;
-    border-radius: 0;
-  }
-
-  nav.open .accent-link a {
-    color: var(--color-dark);
-    width: 100%;
-    padding: 14px 0;
-  }
-
-  /* Dropdowns — "Аб фондзе" / language toggles as full-width items, sub-items stack inline below */
-  nav.open .contacts-link.dropdown,
-  nav.open .lang-link.dropdown {
+  /* "Аб фондзе" as a full-width item below the header row, sub-items stack inline below */
+  nav.open .contacts-link.dropdown {
     display: block;
+    order: 10;
     width: 100%;
     margin-right: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
 
-  nav.open .dropdown-toggle {
+  nav.open .contacts-link .dropdown-toggle {
     width: auto;
     padding: 14px 0;
     justify-content: flex-start;
   }
 
-  nav.open .dropdown .dropdown-menu {
+  nav.open .contacts-link .dropdown-menu {
     position: static;
     border: none;
     box-shadow: none;
@@ -965,7 +971,7 @@ nav.open .nav-hamburger span:nth-child(3) {
     width: 100%;
   }
 
-  nav.open .dropdown-menu a {
+  nav.open .contacts-link .dropdown-menu a {
     display: flex;
     padding: 10px 0;
   }
