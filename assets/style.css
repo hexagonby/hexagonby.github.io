@@ -602,8 +602,8 @@ nav.open .nav-hamburger span:nth-child(3) {
 .footer {
   min-height: 150px;
   display: flex;
-  justify-content: space-between;
-  gap: 35px;
+  justify-content: center;
+  gap: clamp(35px, 8vw, 120px);
   align-items: flex-start;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
