@@ -52,24 +52,30 @@
           <script>
             let cardIndex = 0;
             let cards = document.getElementsByClassName("card");
-            for (let i = 1; i < cards.length; i++) {
-              cards[i].style.display = "none";
+
+            function showCards() {
+              for (let i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+                cards[i].classList.remove("card-peek");
+              }
+              // force a reflow so the fade animation restarts even on cards
+              // that were already visible (e.g. the peek becoming current)
+              void cards[cardIndex].offsetWidth;
+              cards[cardIndex].style.display = "flex";
+              let peekIndex = (cardIndex + 1) % cards.length;
+              cards[peekIndex].classList.add("card-peek");
+              cards[peekIndex].style.display = "flex";
             }
+            showCards();
 
             function prevCard() {
-              cards[cardIndex].style.display = "none";
-              if (--cardIndex < 0) {
-                cardIndex = cards.length - 1;
-              }
-              cards[cardIndex].style.display = "flex";
+              cardIndex = (cardIndex - 1 + cards.length) % cards.length;
+              showCards();
             }
 
             function nextCard() {
-              cards[cardIndex].style.display = "none";
-              if (++cardIndex === cards.length) {
-                cardIndex = 0;
-              }
-              cards[cardIndex].style.display = "flex";
+              cardIndex = (cardIndex + 1) % cards.length;
+              showCards();
             }
           </script>
         </div>

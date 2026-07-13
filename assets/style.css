@@ -12,6 +12,9 @@
   --fs-h2: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
   --fs-h3: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
   --fs-body: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
+
+  --card-width: clamp(20rem, 16.0387rem + 16.9014vw, 31.25rem);
+  --card-gap: 1.5rem;
 }
 
 * {
@@ -257,6 +260,7 @@ nav.open .nav-hamburger span:nth-child(3) {
   padding-top: var(--padding-top-section);
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
+  overflow: hidden;
 }
 
 .about-text {
@@ -297,7 +301,7 @@ nav.open .nav-hamburger span:nth-child(3) {
   background: #ffffff;
   box-shadow: var(--shadow);
   border-radius: 30px;
-  width: clamp(20rem, 16.0387rem + 16.9014vw, 31.25rem);
+  width: var(--card-width);
   height: clamp(27.5rem, 26.3996rem + 4.6948vw, 30.625rem);
 }
 
@@ -622,6 +626,14 @@ nav.open .nav-hamburger span:nth-child(3) {
 
 .about-cards {
   margin-left: auto;
+  position: relative;
+}
+
+.card-peek {
+  position: absolute;
+  top: 0;
+  left: calc(100% + var(--card-gap));
+  pointer-events: none;
 }
 
 .concept {
@@ -758,6 +770,13 @@ nav.open .nav-hamburger span:nth-child(3) {
     padding-top: clamp(3.375rem, 1.5rem + 8vw, 6rem);
     padding-bottom: 1rem;
     margin-left: 0;
+  }
+
+  /* Cards are centered here, so anchor the peek to the card's right
+     edge (50% + half card width) instead of the container's edge */
+  .card-peek {
+    left: calc(50% + var(--card-width) / 2 + var(--card-gap));
+    top: clamp(3.375rem, 1.5rem + 8vw, 6rem);
   }
 
   .how-it-works {
@@ -908,6 +927,10 @@ nav.open .nav-hamburger span:nth-child(3) {
 
   .card {
     width: 100%;
+  }
+
+  .card-peek {
+    display: none !important;
   }
 
   /* Hamburger nav */
