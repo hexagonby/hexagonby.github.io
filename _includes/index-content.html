@@ -89,6 +89,7 @@
         </div>
         <div class="splash"></div>
       </section>
+      <div class="how-scroll-wrapper">
       <section class="how-it-works">
         <div class="gradient-top"></div>
         <div class="gradient-bottom"></div>
@@ -103,7 +104,10 @@
         </div>
         <div class="how-cards-container">
           <div class="how-card">
-            <img src="/assets/how-card1-icon.svg" />
+            <span class="how-card-icon">
+              <img src="/assets/how-card1-icon.svg" />
+              <img class="icon-active" src="/assets/how-card1-icon-active.svg" />
+            </span>
             <div class="how-card-text">
               <p>{{ t.index.how_card1_title }}</p>
               <p>
@@ -112,7 +116,10 @@
             </div>
           </div>
           <div class="how-card">
-            <img src="/assets/how-card2-icon.svg" />
+            <span class="how-card-icon">
+              <img src="/assets/how-card2-icon.svg" />
+              <img class="icon-active" src="/assets/how-card2-icon-active.svg" />
+            </span>
             <div class="how-card-text">
               <p>{{ t.index.how_card2_title }}</p>
               <p>
@@ -121,7 +128,10 @@
             </div>
           </div>
           <div class="how-card">
-            <img src="/assets/how-card3-icon.svg" />
+            <span class="how-card-icon">
+              <img src="/assets/how-card3-icon.svg" />
+              <img class="icon-active" src="/assets/how-card3-icon-active.svg" />
+            </span>
             <div class="how-card-text">
               <p>{{ t.index.how_card3_title }}</p>
               <p>
@@ -130,7 +140,10 @@
             </div>
           </div>
           <div class="how-card">
-            <img src="/assets/how-card4-icon.svg" />
+            <span class="how-card-icon">
+              <img src="/assets/how-card4-icon.svg" />
+              <img class="icon-active" src="/assets/how-card4-icon-active.svg" />
+            </span>
             <div class="how-card-text">
               <p>{{ t.index.how_card4_title }}</p>
               <p>
@@ -140,6 +153,99 @@
           </div>
         </div>
       </section>
+      </div>
+      <script>
+        (function () {
+          var wrapper = document.querySelector(".how-scroll-wrapper");
+          var section = document.querySelector(".how-it-works");
+          var container = document.querySelector(".how-cards-container");
+          var header = document.querySelector("header");
+          var cards = container.querySelectorAll(".how-card");
+          var ticking = false;
+
+          function isDesktop() {
+            return window.innerWidth > 900;
+          }
+
+          function cardScrollRange() {
+            return container.scrollHeight - container.clientHeight;
+          }
+
+          function updateActiveCard() {
+            ticking = false;
+            var centerX = window.innerWidth / 2;
+            var centerY = window.innerHeight / 2;
+            var closest = null;
+            var closestDist = Infinity;
+            cards.forEach(function (card) {
+              var rect = card.getBoundingClientRect();
+              var dx = rect.left + rect.width / 2 - centerX;
+              var dy = rect.top + rect.height / 2 - centerY;
+              var dist = dx * dx + dy * dy;
+              if (dist < closestDist) {
+                closestDist = dist;
+                closest = card;
+              }
+            });
+            cards.forEach(function (card) {
+              card.classList.toggle("active", card === closest);
+            });
+          }
+
+          function requestUpdate() {
+            if (!ticking) {
+              ticking = true;
+              requestAnimationFrame(updateActiveCard);
+            }
+          }
+
+          // Desktop: the section is sticky inside a wrapper that is taller by
+          // the cards' scroll range, so while the section stays pinned the
+          // page scroll drives the cards instead of the page.
+          function layout() {
+            if (!isDesktop()) {
+              wrapper.style.height = "";
+              section.style.top = "";
+              return;
+            }
+            wrapper.style.height = section.offsetHeight + cardScrollRange() + "px";
+            var headerH = header ? header.offsetHeight : 0;
+            section.style.top =
+              Math.max(headerH, (window.innerHeight - section.offsetHeight) / 2) +
+              "px";
+          }
+
+          function syncCards() {
+            if (!isDesktop()) return;
+            var pinTop = parseFloat(section.style.top) || 0;
+            var progress = pinTop - wrapper.getBoundingClientRect().top;
+            container.scrollTop = Math.min(Math.max(progress, 0), cardScrollRange());
+          }
+
+          container.addEventListener("scroll", requestUpdate, { passive: true });
+          window.addEventListener(
+            "scroll",
+            function () {
+              syncCards();
+              requestUpdate();
+            },
+            { passive: true }
+          );
+          window.addEventListener("resize", function () {
+            layout();
+            syncCards();
+            requestUpdate();
+          });
+          window.addEventListener("load", function () {
+            layout();
+            syncCards();
+            requestUpdate();
+          });
+          layout();
+          syncCards();
+          updateActiveCard();
+        })();
+      </script>
       <section class="universities">
         <div class="uni-wrapper">
           <div class="uni-text">

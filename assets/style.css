@@ -399,10 +399,16 @@ nav.open .nav-hamburger span:nth-child(3) {
   z-index: 0;
 }
 
+/* Taller than the section by the cards' scroll range (set via JS) so the
+   sticky section stays pinned while the page scroll drives the cards */
+.how-scroll-wrapper {
+  background-color: var(--color-dark);
+}
+
 .how-it-works {
   background-color: var(--color-dark);
   height: 800px;
-  position: relative;
+  position: sticky;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -447,7 +453,8 @@ nav.open .nav-hamburger span:nth-child(3) {
 }
 
 .how-cards-container {
-  overflow: auto;
+  overflow: hidden;
+  scrollbar-width: none;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: var(--padding-x);
@@ -456,10 +463,39 @@ nav.open .nav-hamburger span:nth-child(3) {
   flex-direction: column;
 }
 
+.how-cards-container::-webkit-scrollbar {
+  display: none;
+}
+
 .how-card {
   display: flex;
   align-items: center;
   gap: 33px;
+}
+
+.how-card-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.how-card-icon img {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+}
+
+.how-card-icon .icon-active {
+  opacity: 0;
+}
+
+.how-card.active .how-card-icon img {
+  opacity: 0;
+}
+
+.how-card.active .how-card-icon .icon-active {
+  opacity: 1;
 }
 
 .how-card-text {
@@ -468,6 +504,13 @@ nav.open .nav-hamburger span:nth-child(3) {
   color: var(--color-muted);
   border-radius: 30px;
   padding: 52px 40px;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.how-card.active .how-card-text {
+  color: var(--color-light);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
 }
 
 .how-card-text p:nth-child(1) {
@@ -788,6 +831,7 @@ nav.open .nav-hamburger span:nth-child(3) {
 
   .how-cards-container {
     flex-direction: row;
+    overflow: auto;
     padding: 40px;
   }
 
@@ -800,8 +844,7 @@ nav.open .nav-hamburger span:nth-child(3) {
     min-height: 270px;
   }
 
-  .how-card img {
-    max-width: fit-content;
+  .how-card-icon {
     align-self: center;
   }
 
