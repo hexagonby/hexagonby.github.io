@@ -532,21 +532,37 @@ nav.open .nav-hamburger span:nth-child(3) {
 }
 
 .uni-wrapper {
-  border: 1px solid;
+  position: relative;
   border-radius: 30px;
-  border-image-source: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    var(--color-muted) 100%
-  );
-  border-image-slice: 1;
   box-shadow: 0px 2px 4px 0px #00000033;
   display: flex;
+  align-items: center;
   gap: 60px;
   padding: 52px 40px;
 }
 
+/* Gradient border that follows the rounded corners (border-image ignores
+   border-radius, so paint the gradient on an overlay and mask out the middle) */
+.uni-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(116, 117, 120, 0.25) 0%,
+    var(--color-muted) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 .uni-text {
+  flex: 1;
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
@@ -556,6 +572,38 @@ nav.open .nav-hamburger span:nth-child(3) {
 .uni-text-two {
   padding-top: 20px;
   font-weight: 600;
+}
+
+.uni-logos {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: center;
+  column-gap: clamp(24px, 3.5vw, 48px);
+  row-gap: clamp(28px, 4vw, 56px);
+}
+
+.uni-logo {
+  height: auto;
+}
+
+.uni-logo-stanford {
+  grid-column: 2;
+  grid-row: 1;
+  width: clamp(150px, 17vw, 209px);
+}
+
+.uni-logo-redcross {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: clamp(140px, 16vw, 195px);
+}
+
+.uni-logo-cambridge {
+  grid-column: 2;
+  grid-row: 2;
+  width: clamp(175px, 20vw, 244px);
 }
 
 .support {
@@ -796,6 +844,36 @@ nav.open .nav-hamburger span:nth-child(3) {
   }
 }
 
+/* Universities — text on top, three logos in one row below. Switches earlier
+   than the other sections (1200px vs 900px) so the side-by-side layout only
+   appears when the text column has enough room */
+@media (max-width: 1200px) {
+  .uni-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 48px;
+  }
+
+  .uni-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .uni-logo-stanford {
+    width: 24%;
+  }
+
+  .uni-logo-redcross {
+    width: 21%;
+  }
+
+  .uni-logo-cambridge {
+    width: 28%;
+  }
+}
+
 @media (max-width: 900px) {
   .about {
     display: flex;
@@ -848,10 +926,6 @@ nav.open .nav-hamburger span:nth-child(3) {
     align-self: center;
   }
 
-  .uni-svg {
-    display: none;
-  }
-
   .buttons ul {
     flex-direction: column;
     align-items: center;
@@ -896,13 +970,30 @@ nav.open .nav-hamburger span:nth-child(3) {
     min-height: 0;
   }
 
-  /* Universities */
+  /* Universities — Stanford and Red Cross in a row, Cambridge below */
   .universities {
     padding: 48px var(--padding-x);
   }
 
   .uni-text {
     font-size: var(--fs-body);
+  }
+
+  .uni-logos {
+    flex-wrap: wrap;
+    row-gap: 36px;
+  }
+
+  .uni-logo-stanford {
+    width: 42%;
+  }
+
+  .uni-logo-redcross {
+    width: 37%;
+  }
+
+  .uni-logo-cambridge {
+    width: 46%;
   }
 
   /* Concept / Legal pages */
