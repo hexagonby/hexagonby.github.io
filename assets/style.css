@@ -245,10 +245,18 @@ nav.open .nav-hamburger span:nth-child(3) {
   border-radius: 15px;
 }
 
+.accent-link:hover {
+  background-color: #000000;
+}
+
 .accent-link a {
   color: #ffffff;
   display: block;
   padding: 1em 2em;
+}
+
+.accent-link a:hover {
+  text-decoration: none;
 }
 
 .about {
@@ -279,7 +287,7 @@ nav.open .nav-hamburger span:nth-child(3) {
   padding-top: clamp(3.375rem, 1rem, 5rem);
   font-weight: 400;
   font-size: var(--fs-body);
-  line-height: 2rem;
+  line-height: 160%;
 }
 
 .about-text-paragraph {
@@ -385,7 +393,7 @@ nav.open .nav-hamburger span:nth-child(3) {
 .goal-text-text {
   font-weight: 300;
   font-size: var(--fs-h2);
-  line-height: 100%;
+  line-height: 130%;
   padding-top: clamp(3.75rem, 3.4859rem + 1.1268vw, 4.5rem);
   padding-right: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
   padding-left: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
@@ -655,7 +663,8 @@ nav.open .nav-hamburger span:nth-child(3) {
 }
 
 .support-btn:hover {
-  text-decoration: underline;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .subscribe-group {
@@ -695,7 +704,8 @@ nav.open .nav-hamburger span:nth-child(3) {
 }
 
 .amount-btn:hover {
-  background-color: rgba(255, 255, 255, 0.28);
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .footer {
@@ -799,7 +809,7 @@ nav.open .nav-hamburger span:nth-child(3) {
 }
 
 .report-download:hover {
-  text-decoration: underline;
+  background-color: #000000;
 }
 
 .scroll-top {
@@ -949,8 +959,10 @@ nav.open .nav-hamburger span:nth-child(3) {
   }
 
   .splash {
-    height: 260px;
+    height: 310px;
     top: 0;
+    /* tuck under the goal block's rounded corners */
+    margin-top: -50px;
   }
 
   /* How-it-works cards — back to vertical stack */
