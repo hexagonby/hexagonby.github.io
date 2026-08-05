@@ -9,6 +9,8 @@ ui:
   menu: Menu
   language: Language
   scroll_top: Back to top
+footer:
+  former_name: formerly
 index:
   hero_before: An independent financial instrument of
   hero_accent: long-term

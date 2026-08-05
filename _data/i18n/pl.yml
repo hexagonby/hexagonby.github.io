@@ -9,6 +9,8 @@ ui:
   menu: Menu
   language: Język
   scroll_top: Do góry
+footer:
+  former_name: dawniej
 index:
   hero_before: Niezależny instrument finansowy
   hero_accent: długoterminowego
