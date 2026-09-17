@@ -9,8 +9,6 @@ ui:
   menu: Меню
   language: Мова
   scroll_top: Наверх
-footer:
-  former_name: раней
 index:
   hero_before: Незалежны фінансавы інструмент
   hero_accent: доўгатэрміновай
